@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-enum RoomType {
+enum Type {
     INVALID = 0, EMPTY, TREASURE, SHRINE, SHOP, ARENA
 };
 
@@ -13,5 +13,5 @@ struct Room {
     std::string name;
     std::vector< std::pair<Direction, Room> > connections;
     int floor;
-
+    Type roomType; 
 };
