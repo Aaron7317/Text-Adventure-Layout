@@ -3,13 +3,21 @@
 
 
 class Item {
+    public:
+        std::string name;
+        int maxAmount;
+
+        Item(std::string n, int mA);
+        Item();
+
+        
+};
+
+class HealthConsumable : public Item{
+
 
 };
 
-class HealthConsumable {
-
-};
-
-class Weapon {
+class Weapon : public Item {
 
 };
