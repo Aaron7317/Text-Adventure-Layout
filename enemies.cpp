@@ -1,32 +1,10 @@
-#include "enemies.h"
+#include "characters.h"
 
 
 Enemy::Enemy(int l, EnemyType t) 
-    :level(l), type(t) 
-    {
-        damage = level - 2;
-        health = level * 4;      
- 
-    }
-
-void Enemy::hitEnemy(int amount) {
-    health -= amount;
-}
-
-bool Enemy::isAlive() {
-    if (health <= 0) {
-        return false;
-    }
-    return true;
-}
-
-int Enemy::getdamage() {
-    return damage;
-}
-
-int Enemy::getHealth() {
-    return health;
-}
+:type(t), Character(l)
+{   
+} 
 
 
 void Enemy::attack() {

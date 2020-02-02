@@ -9,17 +9,32 @@ enum EnemyType {
     PITCHFORKCAT = 0, GIANTANT, PIPE
 };
 
-class Enemy {
+
+class Character {
+    public:
+        int level, health, damage;
+
+        Character(int l);
+
+        void hit(int amount);
+        bool isAlive();
+};
+
+
+class Enemy : public Character {
     private:
         EnemyType type;
-        int level, health, damage;
 
     public:
         Enemy(int l, EnemyType t);
         
-        void hitEnemy(int amount);
-        bool isAlive();
-        int getHealth();
-        int getdamage();
         void attack();
+};
+
+
+class Player : public Character {
+    private:
+
+    public:
+        Player(int l);
 };
