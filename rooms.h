@@ -2,11 +2,13 @@
 #include <iostream>
 #include <vector>
 
+//may use namespaces to avoid confusion with other branches (probably won't)
+
 //TODO: Once enemy branch is done, add enemies to rooms
 
 //Node based connections
 
-enum Type {
+enum RoomType {
     STANDARD = 0, TREASURE, SHRINE, SHOP, ARENA
 };
 
@@ -20,11 +22,11 @@ class Room {
         std::string name;
         std::vector< std::pair<Direction, Room> > connections;
         int floor;
-        Type roomType; 
+        RoomType type; 
     
     public:
-        Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, Type t); 
-        Type getType();
+        Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, RoomType t); 
+        RoomType getType();
         void initializeType();
         void addConnection(std::pair<Direction, Room> newConnection);
 };

@@ -1,17 +1,17 @@
 #include "rooms.h"
 
 
-Room::Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, Type t)
-    :name(n), connections(c), floor(f), roomType(t)
+Room::Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, RoomType t)
+    :name(n), connections(c), floor(f), type(t)
     {
     }
 
-Type Room::getType() {
-    return roomType;
+RoomType Room::getType() {
+    return type;
 }
 
 void Room::initializeType() {
-    switch(roomType) {
+    switch(type) {
         case 0:
             
             break;
