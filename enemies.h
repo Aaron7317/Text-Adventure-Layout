@@ -15,5 +15,11 @@ class Enemy {
         int level, health, damage;
 
     public:
-        Enemy();
+        Enemy(int l, EnemyType t);
+        
+        void hitEnemy(int amount);
+        bool isAlive();
+        int getHealth();
+        int getdamage();
+        void attack();
 };
