@@ -28,14 +28,11 @@ int Enemy::getHealth() {
     return health;
 }
 
-//Little men with pitchforks and cat heads
-//Also big ants that wear shoes and have mustaches and glasses
-//a smoking pipe that has a funny face and arms but no legs so it Carrie's itself around by its arms
 
 void Enemy::attack() {
     switch(type) {
         case 0:
-            std::cout << "A short but ferocious man with the head of a cat rushes towards you screeching!\n";
+            std::cout << "A short, but ferocious, man with the head of a cat rushes towards you screeching!\n";
             std::cout << "In it's hand is a sharp pitchfork.\n";
             break;
 
