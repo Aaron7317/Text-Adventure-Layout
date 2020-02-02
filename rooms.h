@@ -14,4 +14,6 @@ struct Room {
     std::vector< std::pair<Direction, Room> > connections;
     int floor;
     Type roomType; 
+
+    Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, Type t); 
 };
