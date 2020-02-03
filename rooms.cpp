@@ -1,8 +1,8 @@
 #include "rooms.h"
 
 
-Room::Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, RoomType t)
-    :name(n), connections(c), floor(f), type(t)
+Room::Room(std::string n, int f, RoomType t)
+    :name(n), floor(f), type(t)
     {
     }
 
@@ -36,4 +36,14 @@ void Room::initializeType() {
 
 void Room::addConnection(std::pair<Direction, Room> newConnection) {
     connections.push_back(newConnection);
+}
+
+void Room::addMultipleConnections(std::vector< std::pair<Direction, Room> > newConnectionVector) {
+    for (int i = 0; i < newConnectionVector.size(); i++) {
+        connections.push_back(newConnectionVector[i]);
+    }
+}
+
+std::vector< std::pair<Direction, Room> > Room::getConnections() {
+    return connections;
 }

@@ -25,8 +25,14 @@ class Room {
         RoomType type; 
     
     public:
-        Room(std::string n, std::vector< std::pair<Direction, Room> > c, int f, RoomType t); 
+        
+        Room(std::string n, int f, RoomType t); 
+
         RoomType getType();
         void initializeType();
         void addConnection(std::pair<Direction, Room> newConnection);
+        void addMultipleConnections(std::vector< std::pair<Direction, Room> > newConnectionVector);
+        std::vector< std::pair<Direction, Room> > getConnections();
 };
+
+
