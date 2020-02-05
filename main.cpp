@@ -1,6 +1,6 @@
 #include <iostream>
-#include "rooms.h"
 
+//g++ -I D:\git\Text-Adventure-Layout\include *.cpp -o name.exe
 
 int main() {
 
