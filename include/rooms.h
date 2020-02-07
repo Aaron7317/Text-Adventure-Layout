@@ -30,12 +30,19 @@ class Shrine : public Room {
     public:
         Shrine(std::string n);
         void roomMethod();
-
 };
 
 class Shop : public Room {
     public:
         Shop(std::string n);
+        void roomMethod();
+};
+
+class Library : public Room {
+    private:
+        std::string loreEntry;
+    public:
+        Library(std::string n, std::string l);
         void roomMethod();
 };
 

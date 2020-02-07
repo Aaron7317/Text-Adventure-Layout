@@ -49,3 +49,13 @@ void Shop::roomMethod() {
     std::cout << "You can probably buy goods there.\n";
     //commandVector.push_back(SHOP)    (SHOP is an enum / commandVector is a method where all available command enums are stored)
 }
+
+Library::Library(std::string n, std::string l)
+:Room(n), loreEntry(l)
+{
+}
+
+void Library::roomMethod() {
+    std::cout << "You enter a library with very few books left on the shelves...\n";
+    std::cout << "You open one and can barely make out the words:\n";
+}
