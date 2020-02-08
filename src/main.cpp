@@ -1,5 +1,4 @@
 #include <iostream>
-#include "characters.h"
 
 int main() {
 

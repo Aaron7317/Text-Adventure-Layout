@@ -7,7 +7,7 @@ Enemy::Enemy(int l, EnemyType t)
 } 
 
 
-void Enemy::attack() {
+void Enemy::engage() {
     switch(type) {
         case 0:
             std::cout << "A short, but ferocious, man with the head of a cat rushes towards you screeching!\n";
@@ -30,3 +30,4 @@ void Enemy::attack() {
             break;
     }
 }
+

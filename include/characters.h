@@ -16,8 +16,8 @@ class Character {
 
         Character(int l);
 
-        void hit(int amount);
         bool isAlive();
+        void attack(Character& target);
 };
 
 
@@ -28,13 +28,18 @@ class Enemy : public Character {
     public:
         Enemy(int l, EnemyType t);
         
-        void attack();
+        void engage();
 };
 
 
 class Player : public Character {
     private:
+        int maxHealth;
+        double xp;
 
     public:
         Player(int l);
+        
+        void gainXP(Enemy defeatedOpponent);
+        void setMaxHealth();
 };

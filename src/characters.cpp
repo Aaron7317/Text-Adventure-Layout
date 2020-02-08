@@ -8,15 +8,14 @@ Character::Character(int l)
     health = level * 4;
 }
 
-
-void Character::hit(int amount) {
-    health -= amount;
-}
-
 bool Character::isAlive() {
     if (health <= 0) {
         return false;
     }
     return true;
+}
+
+void Character::attack(Character& target) {
+    target.health -= damage;
 }
 
