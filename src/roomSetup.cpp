@@ -1,5 +1,4 @@
 #include "rooms.h"
 
-// setup all room objects
-
+// create all room objects here
 
