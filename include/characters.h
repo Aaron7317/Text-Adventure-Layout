@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <vector>
 
 //Little men with pitchforks and cat heads
 //Also big ants that wear shoes and have mustaches and glasses
@@ -37,12 +36,10 @@ class Player : public Character {
     private:
         int maxHealth, money;
         double xp;
-        //std::vector<Item> inventory;
 
     public:
         Player(int l);
         
         void calculateWinnings(Enemy defeatedOpponent);
         void setMaxHealth();
-        //void addItem(Item newItem); (define addItem method after adding in items)
 };
