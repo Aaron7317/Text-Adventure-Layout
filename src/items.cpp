@@ -1,7 +1,7 @@
 #include "items.h"
 
 
-Item::Item(std::string n, int mA) 
-:name(n), maxAmount(mA) 
+Item::Item(std::string n) 
+:name(n) 
 {
 }

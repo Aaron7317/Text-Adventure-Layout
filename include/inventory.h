@@ -1,13 +1,16 @@
 #pragma once
 #include <iostream>
+#include <vector>
 #include "items.h"
 
 
-class Inventory {
-    private:
-        Item stuff[8];
-    public:
+struct Inventory {
+        
+        std::vector<Item> stuff;
+        
         Inventory();
 
         void printInventory();
+        void addItem(Item addedItem);
+        void removeItem(Item removedItem);
 };
