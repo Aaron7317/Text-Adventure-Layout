@@ -26,11 +26,13 @@ class Room {
         void roomMethod();
 };
 
+
 class Shrine : public Room {
     public:
         Shrine(std::string n);
         void roomMethod();
 };
+
 
 class Shop : public Room {
     public:
@@ -38,11 +40,19 @@ class Shop : public Room {
         void roomMethod();
 };
 
+
 class Library : public Room {
     private:
         std::string loreEntry;
     public:
         Library(std::string n, std::string l);
+        void roomMethod();
+};
+
+
+class EnemyRoom : public Room {
+    public:
+        EnemyRoom(std::string name); //need to add enemy type into here
         void roomMethod();
 };
 
