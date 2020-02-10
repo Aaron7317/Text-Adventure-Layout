@@ -10,7 +10,7 @@ struct Inventory {
         
         Inventory();
 
-        void printInventory();
+        void displayInventory();
         void addItem(Item addedItem);
-        void removeItem(Item removedItem);
+        void removeItem(int removeIndex);
 };
