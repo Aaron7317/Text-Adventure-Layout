@@ -1,6 +1,5 @@
 #include "items.h"
-
-
+#include "characters.h"
 
 
 Item::Item(std::string n) 
@@ -8,9 +7,11 @@ Item::Item(std::string n)
 {
 }
 
+
 void Item::useItem() {
     std::cout << "You cannot do this now.\n";
 }
+
 
 HealthConsumable::HealthConsumable(std::string n, int hA) 
 :Item(n)
@@ -18,9 +19,11 @@ HealthConsumable::HealthConsumable(std::string n, int hA)
     healingAmount = hA;
 }
 
+
 void HealthConsumable::useItem(Player& player) {
     player.addHealth(healingAmount);
 }
+
 
 Weapon::Weapon(std::string n, int wD) 
 :Item(n)
@@ -28,9 +31,11 @@ Weapon::Weapon(std::string n, int wD)
     weaponDamage = wD;
 }
 
+
 void Weapon::useItem() {
     std::cout << "You cannot do this now.\n";
 }
+
 
 void Weapon::useItem(Enemy& target, Player player) {
     target.attack(player.damage + weaponDamage);
