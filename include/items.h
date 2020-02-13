@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-
+#include "characters.h"
 
 class Item {
     public:

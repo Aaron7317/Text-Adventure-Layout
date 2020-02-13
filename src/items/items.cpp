@@ -1,5 +1,4 @@
 #include "items.h"
-#include "characters.h"
 
 
 Item::Item(std::string n) 

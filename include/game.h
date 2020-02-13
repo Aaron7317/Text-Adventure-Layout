@@ -12,10 +12,15 @@ enum BaseCommand {
 // make commandVector and maybe use switch with the index of command
 class Game {
     private:
-        GameState currentState = INTRO;
+        GameState currentState;
     public:
-        Game();
+        Game(GameState cS);
 
         void setGameState(GameState newState);
         GameState getGameState();
+        void intro();
+        void standardTurn();
+        void combatTurn();
+        
+        void gameLoop();
 };
