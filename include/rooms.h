@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "characters.h"
 
 
 //Node based connections
@@ -11,9 +12,10 @@ enum Direction {
 };
 
 
-class Room {         
+class Room {                                                     
     public:
 
+        bool occupiedByPlayer;
         std::string name;
         std::vector< std::pair<Direction, Room> > connections;
 
@@ -22,7 +24,7 @@ class Room {
 
         void addConnection(std::pair<Direction, Room> newConnection);
         void addMultipleConnections(std::vector< std::pair<Direction, Room> > newConnectionVector);
-        
+        Room getRelativeRoom(Direction relativeDirection);
         // methods will be overriden for each room type and called for each room
         void enter();
         void leave();
@@ -55,10 +57,4 @@ class Library : public Room {
 };
 
 
-class EnemyRoom : public Room {
-    public:
-        EnemyRoom(std::string name); //need to add enemy type into here
-        void enter();
-        void leave();
-};
 

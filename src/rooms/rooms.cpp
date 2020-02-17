@@ -16,9 +16,17 @@ void Room::addMultipleConnections(std::vector< std::pair<Direction, Room> > newC
     }
 }
 
+Room Room::getRelativeRoom(Direction relativeDirection) {
+    for (int i = 0; i < connections.size(); i++) {
+        if (connections[i].first == relativeDirection) {
+            return connections[i].second;
+        }
+    }
+}
 
 void Room::enter() {
     std::cout << "The room is empty.";
+    
 }
 
 
@@ -33,6 +41,7 @@ void Shrine::enter() {
     std::cout << "You enter a room with a beautiful shrine...\n";
     std::cout << "Your health is restored to full\n";
     //Player.health = maxHealth;
+    
 }
 
 
@@ -45,6 +54,7 @@ void Shop::enter() {
     std::cout << "You enter a large area with a nearby shop...\n";
     std::cout << "You can probably buy goods there.\n";
     //commandVector.push_back(SHOP)    (SHOP is an enum / commandVector is a method where all available command enums are stored)
+    
 }
 
 Library::Library(std::string n, std::string l)
@@ -55,4 +65,5 @@ Library::Library(std::string n, std::string l)
 void Library::enter() {
     std::cout << "You enter a library with very few books left on the shelves...\n";
     std::cout << "You open one and can barely make out the words:\n";
+    
 }

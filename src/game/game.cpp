@@ -4,8 +4,8 @@
 
 
 
-Game::Game(GameState cS)
-:currentState(cS)
+Game::Game(GameState cS, Room initialRoom)
+:currentState(cS), currentRoom(initialRoom)
 {
 }
 
@@ -33,8 +33,7 @@ void Game::addCommand(BaseCommand newCommand) {
 void Game::intro() {
     std::cout << "Welcome to the Text Adventures of Destromos!\n";
     std::cout << "Press Enter to continue\n";
-    std::cin;
-    std::cout << "You stand empty handed in a dimly lit room.";
+    std::cin;  
     currentState = STANDARDTURN;
 }
 
@@ -66,4 +65,11 @@ void Game::gameLoop() {
             std::cout << "Error! Invalid gameState";
             break;
     }
+}
+
+
+void Game::moveRooms(Room newRoom) {
+    currentRoom.leave();
+    newRoom.enter();
+    currentRoom = newRoom;
 }

@@ -19,7 +19,7 @@ class Game {
         std::vector<Direction> availabeMoves;
         std::vector<BaseCommand> availableCommands;
     public:
-        Game(GameState cS);
+        Game(GameState cS, Room initialRoom);
 
         void setGameState(GameState newState);
         GameState getGameState();
@@ -31,4 +31,6 @@ class Game {
         void standardTurn();
         void combatTurn();
         void gameLoop();
+
+        void moveRooms(Room newRoom);
 };

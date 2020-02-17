@@ -26,3 +26,8 @@ void Player::balanceHealth() {
         health = maxHealth;
     }
 }
+
+void Player::addHealth(int amount) {
+    health += amount;
+    balanceHealth();
+}

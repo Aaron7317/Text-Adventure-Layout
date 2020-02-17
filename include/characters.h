@@ -44,4 +44,5 @@ class Player : public Character {
         void calculateWinnings(Enemy defeatedOpponent);
         void setMaxHealth();
         void balanceHealth();
+        void addHealth(int amount);
 };
