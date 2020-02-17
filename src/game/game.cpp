@@ -1,5 +1,7 @@
 #include <iostream>
+#include <algorithm>
 #include "game.h"
+
 
 
 Game::Game(GameState cS)
@@ -15,8 +17,25 @@ GameState Game::getGameState() {
     return currentState;
 }
 
-void Game::intro() {
 
+void Game::updateAvailableMoves() {
+    availabeMoves.clear();
+    for (int i = 0; i < currentRoom.connections.size(); i++) {
+        availabeMoves.push_back(currentRoom.connections[i].first);
+    }
+} 
+
+void Game::addCommand(BaseCommand newCommand) {
+    availableCommands.push_back(newCommand);
+}
+
+
+void Game::intro() {
+    std::cout << "Welcome to the Text Adventures of Destromos!\n";
+    std::cout << "Press Enter to continue\n";
+    std::cin;
+    std::cout << "You stand empty handed in a dimly lit room.";
+    currentState = STANDARDTURN;
 }
 
 void Game::standardTurn() {

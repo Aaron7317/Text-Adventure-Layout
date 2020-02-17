@@ -16,11 +16,8 @@ void Room::addMultipleConnections(std::vector< std::pair<Direction, Room> > newC
     }
 }
 
-std::vector< std::pair<Direction, Room> > Room::getConnections() {
-    return connections;
-}
 
-void Room::roomMethod() {
+void Room::enter() {
     std::cout << "The room is empty.";
 }
 
@@ -32,7 +29,7 @@ Shrine::Shrine(std::string n)
 {
 }
 
-void Shrine::roomMethod() {
+void Shrine::enter() {
     std::cout << "You enter a room with a beautiful shrine...\n";
     std::cout << "Your health is restored to full\n";
     //Player.health = maxHealth;
@@ -44,7 +41,7 @@ Shop::Shop(std::string n)
 {
 }
 
-void Shop::roomMethod() {
+void Shop::enter() {
     std::cout << "You enter a large area with a nearby shop...\n";
     std::cout << "You can probably buy goods there.\n";
     //commandVector.push_back(SHOP)    (SHOP is an enum / commandVector is a method where all available command enums are stored)
@@ -55,7 +52,7 @@ Library::Library(std::string n, std::string l)
 {
 }
 
-void Library::roomMethod() {
+void Library::enter() {
     std::cout << "You enter a library with very few books left on the shelves...\n";
     std::cout << "You open one and can barely make out the words:\n";
 }
