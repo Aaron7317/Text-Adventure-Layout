@@ -33,4 +33,5 @@ class Game {
         void gameLoop();
 
         void moveRooms(Room newRoom);
+        BaseCommand askUserCommand();
 };
