@@ -29,6 +29,10 @@ void Room::enter() {
     
 }
 
+void Room::leave() {
+    
+}
+
 
 //All Room Types...
 
