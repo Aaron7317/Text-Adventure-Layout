@@ -74,12 +74,13 @@ void Game::moveRooms(Room newRoom) {
     currentRoom = newRoom;
 }
 
-BaseCommand Game::askUserCommand() {
+int Game::askUserCommand() {
     int userCommand; 
     for (int i = 0; i < availableCommands.size(); i ++) {
         std::cout << i << ") " << availableCommands[i] << "\n";
     }
     std::cout << "What would you like to do?\n";
     std::cin >> userCommand;
+    return userCommand;
     
 }

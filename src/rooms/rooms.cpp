@@ -22,6 +22,7 @@ Room Room::getRelativeRoom(Direction relativeDirection) {
             return connections[i].second;
         }
     }
+    
 }
 
 void Room::enter() {
